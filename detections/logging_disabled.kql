@@ -1,0 +1,8 @@
+// Approval context is a lab baseline, not a verdict of unauthorized access.
+let ApprovedCallers=dynamic(["change-bot@example.test"]);
+AzureActivity
+| where TimeGenerated between (ago(15m) .. now())
+| where OperationNameValue =~ "MICROSOFT.INSIGHTS/DIAGNOSTICSETTINGS/DELETE"
+| where ActivityStatusValue =~ "Success"
+| where tolower(Caller) !in (ApprovedCallers)
+| project TimeGenerated, Caller, CallerIpAddress, ResourceId, CorrelationId, OperationNameValue

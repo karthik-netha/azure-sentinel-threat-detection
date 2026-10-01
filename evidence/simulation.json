@@ -1,0 +1,73 @@
+{
+  "mode": "Python semantic simulation, not KQL execution",
+  "evaluation_time": "2026-01-15T10:10:00Z",
+  "events": 29,
+  "scenarios": 8,
+  "scenario_confusion_matrix": {
+    "true_positive": 3,
+    "false_positive": 2,
+    "true_negative": 3,
+    "false_negative": 0
+  },
+  "findings": [
+    {
+      "rule": "AUTH-001",
+      "ip": "198.51.100.24",
+      "window": "2026-01-15T10:00:00+00:00",
+      "failures": 10,
+      "distinct_users": 5,
+      "evidence": [
+        "spray-00",
+        "spray-01",
+        "spray-02",
+        "spray-03",
+        "spray-04",
+        "spray-05",
+        "spray-06",
+        "spray-07",
+        "spray-08",
+        "spray-09"
+      ]
+    },
+    {
+      "rule": "AUTH-001",
+      "ip": "203.0.113.8",
+      "window": "2026-01-15T10:00:00+00:00",
+      "failures": 10,
+      "distinct_users": 5,
+      "evidence": [
+        "nat-00",
+        "nat-01",
+        "nat-02",
+        "nat-03",
+        "nat-04",
+        "nat-05",
+        "nat-06",
+        "nat-07",
+        "nat-08",
+        "nat-09"
+      ]
+    },
+    {
+      "rule": "AZ-001",
+      "actor": "user0@example.test",
+      "evidence": [
+        "delete-01"
+      ]
+    },
+    {
+      "rule": "IAM-001",
+      "actor": "00000000-0000-0000-0000-000000000001",
+      "evidence": [
+        "pim-01"
+      ]
+    },
+    {
+      "rule": "IAM-001",
+      "actor": "user0@example.test",
+      "evidence": [
+        "role-01"
+      ]
+    }
+  ]
+}

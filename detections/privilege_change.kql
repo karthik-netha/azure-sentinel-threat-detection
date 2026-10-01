@@ -1,0 +1,8 @@
+// Includes user and application initiators; inspect raw TargetResources for role details.
+AuditLogs
+| where TimeGenerated between (ago(15m) .. now())
+| where OperationName in~ ("Add member to role", "Add eligible member to role")
+| where Result =~ "success"
+| extend Actor=coalesce(tostring(InitiatedBy.user.userPrincipalName), tostring(InitiatedBy.app.servicePrincipalId)),
+    ActorIP=tostring(InitiatedBy.user.ipAddress)
+| project TimeGenerated, Id, OperationName, Actor, ActorIP, TargetResources, CorrelationId

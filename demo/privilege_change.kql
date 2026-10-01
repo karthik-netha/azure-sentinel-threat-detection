@@ -1,0 +1,13 @@
+// SYNTHETIC FIXTURE. Not yet executed against Kusto.
+let AuditLogs=datatable(TimeGenerated:datetime, Id:string, OperationName:string, Result:string, InitiatedBy:dynamic, TargetResources:dynamic, CorrelationId:string)[
+datetime(2026-01-15T10:05:30Z), "role-01", "Add member to role", "success", dynamic({"user": {"userPrincipalName": "user0@example.test", "ipAddress": "198.51.100.24"}}), dynamic([{"type": "User", "userPrincipalName": "user0@example.test", "modifiedProperties": [{"displayName": "Role.DisplayName", "oldValue": "null", "newValue": "\"Global Administrator\""}]}]), "lab-role-01",
+datetime(2026-01-15T10:06:00Z), "pim-01", "Add eligible member to role", "success", dynamic({"app": {"servicePrincipalId": "00000000-0000-0000-0000-000000000001"}}), dynamic([{"type": "User", "userPrincipalName": "admin@example.test"}]), "lab-pim-01"
+];
+// Includes user and application initiators; inspect raw TargetResources for role details.
+AuditLogs
+| where TimeGenerated between (datetime(2026-01-15T09:55:00Z) .. datetime(2026-01-15T10:10:00Z))
+| where OperationName in~ ("Add member to role", "Add eligible member to role")
+| where Result =~ "success"
+| extend Actor=coalesce(tostring(InitiatedBy.user.userPrincipalName), tostring(InitiatedBy.app.servicePrincipalId)),
+    ActorIP=tostring(InitiatedBy.user.ipAddress)
+| project TimeGenerated, Id, OperationName, Actor, ActorIP, TargetResources, CorrelationId

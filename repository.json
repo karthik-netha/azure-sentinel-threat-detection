@@ -1,0 +1,14 @@
+{
+  "name": "azure-sentinel-threat-detection",
+  "description": "Personal Sentinel detection lab: KQL, synthetic identity/activity logs, ATT&CK mapping, local validation, and incident investigation.",
+  "topics": [
+    "cybersecurity",
+    "microsoft-sentinel",
+    "kql",
+    "detection-engineering",
+    "mitre-attack",
+    "soc",
+    "sc-200"
+  ],
+  "license": "MIT"
+}

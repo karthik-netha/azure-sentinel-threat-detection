@@ -1,0 +1,50 @@
+[
+  {
+    "name": "attack spray",
+    "rule": "AUTH-001",
+    "evidence": "spray-00",
+    "malicious": true
+  },
+  {
+    "name": "shared NAT stale credentials",
+    "rule": "AUTH-001",
+    "evidence": "nat-00",
+    "malicious": false
+  },
+  {
+    "name": "role persistence",
+    "rule": "IAM-001",
+    "evidence": "role-01",
+    "malicious": true
+  },
+  {
+    "name": "approved PIM eligibility",
+    "rule": "IAM-001",
+    "evidence": "pim-01",
+    "malicious": false
+  },
+  {
+    "name": "unexpected log deletion",
+    "rule": "AZ-001",
+    "evidence": "delete-01",
+    "malicious": true
+  },
+  {
+    "name": "approved log change",
+    "rule": "AZ-001",
+    "evidence": "approved-01",
+    "malicious": false
+  },
+  {
+    "name": "failed log deletion",
+    "rule": "AZ-001",
+    "evidence": "failed-01",
+    "malicious": false
+  },
+  {
+    "name": "isolated password typos",
+    "rule": "AUTH-001",
+    "evidence": "typo-0",
+    "malicious": false
+  }
+]

@@ -1,0 +1,109 @@
+Local validation captured at 2026-10-01T23:32:49.734255+00:00
+Platform: win32
+Python: 3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]
+Cloud deployment and integration tests: NOT RUN
+
+> python -m unittest discover -s tests -v
+
+test_app_initiator_preserved (test_detection.Detection.test_app_initiator_preserved) ... ok
+test_approved_caller_case (test_detection.Detection.test_approved_caller_case) ... ok
+test_baseline_findings_and_evidence (test_detection.Detection.test_baseline_findings_and_evidence) ... ok
+test_distinct_users_case_insensitive (test_detection.Detection.test_distinct_users_case_insensitive) ... ok
+test_empty_auth_identity_ignored (test_detection.Detection.test_empty_auth_identity_ignored) ... ok
+test_exact_threshold (test_detection.Detection.test_exact_threshold) ... ok
+test_excludes_old_events (test_detection.Detection.test_excludes_old_events) ... ok
+test_failed_role_change_ignored (test_detection.Detection.test_failed_role_change_ignored) ... ok
+test_fixed_bin_blind_spot (test_detection.Detection.test_fixed_bin_blind_spot) ... ok
+test_naive_timestamp_rejected (test_detection.Detection.test_naive_timestamp_rejected) ... ok
+test_threshold_below_ten (test_detection.Detection.test_threshold_below_ten) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.002s
+
+OK
+
+Exit code: 0
+
+> python -m lab
+{
+  "mode": "Python semantic simulation, not KQL execution",
+  "evaluation_time": "2026-01-15T10:10:00Z",
+  "events": 29,
+  "scenarios": 8,
+  "scenario_confusion_matrix": {
+    "true_positive": 3,
+    "false_positive": 2,
+    "true_negative": 3,
+    "false_negative": 0
+  },
+  "findings": [
+    {
+      "rule": "AUTH-001",
+      "ip": "198.51.100.24",
+      "window": "2026-01-15T10:00:00+00:00",
+      "failures": 10,
+      "distinct_users": 5,
+      "evidence": [
+        "spray-00",
+        "spray-01",
+        "spray-02",
+        "spray-03",
+        "spray-04",
+        "spray-05",
+        "spray-06",
+        "spray-07",
+        "spray-08",
+        "spray-09"
+      ]
+    },
+    {
+      "rule": "AUTH-001",
+      "ip": "203.0.113.8",
+      "window": "2026-01-15T10:00:00+00:00",
+      "failures": 10,
+      "distinct_users": 5,
+      "evidence": [
+        "nat-00",
+        "nat-01",
+        "nat-02",
+        "nat-03",
+        "nat-04",
+        "nat-05",
+        "nat-06",
+        "nat-07",
+        "nat-08",
+        "nat-09"
+      ]
+    },
+    {
+      "rule": "AZ-001",
+      "actor": "user0@example.test",
+      "evidence": [
+        "delete-01"
+      ]
+    },
+    {
+      "rule": "IAM-001",
+      "actor": "00000000-0000-0000-0000-000000000001",
+      "evidence": [
+        "pim-01"
+      ]
+    },
+    {
+      "rule": "IAM-001",
+      "actor": "user0@example.test",
+      "evidence": [
+        "role-01"
+      ]
+    }
+  ]
+}
+
+
+Exit code: 0
+
+> python scripts/make_kql_demo.py
+Generated 3 standalone KQL demos; generation does not validate KQL execution.
+
+
+Exit code: 0

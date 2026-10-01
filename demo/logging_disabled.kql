@@ -1,0 +1,14 @@
+// SYNTHETIC FIXTURE. Not yet executed against Kusto.
+let AzureActivity=datatable(TimeGenerated:datetime, Caller:string, CallerIpAddress:string, ResourceId:string, CorrelationId:string, OperationNameValue:string, ActivityStatusValue:string)[
+datetime(2026-01-15T10:07:00Z), "user0@example.test", "198.51.100.24", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/lab/providers/Microsoft.Insights/diagnosticSettings/lab-logs", "lab-delete-01", "MICROSOFT.INSIGHTS/DIAGNOSTICSETTINGS/DELETE", "Success",
+datetime(2026-01-15T10:07:20Z), "change-bot@example.test", "198.51.100.24", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/lab/providers/Microsoft.Insights/diagnosticSettings/lab-logs", "lab-approved-01", "MICROSOFT.INSIGHTS/DIAGNOSTICSETTINGS/DELETE", "Success",
+datetime(2026-01-15T10:07:40Z), "user0@example.test", "198.51.100.24", "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/lab/providers/Microsoft.Insights/diagnosticSettings/lab-logs", "lab-failed-01", "MICROSOFT.INSIGHTS/DIAGNOSTICSETTINGS/DELETE", "Failure"
+];
+// Approval context is a lab baseline, not a verdict of unauthorized access.
+let ApprovedCallers=dynamic(["change-bot@example.test"]);
+AzureActivity
+| where TimeGenerated between (datetime(2026-01-15T09:55:00Z) .. datetime(2026-01-15T10:10:00Z))
+| where OperationNameValue =~ "MICROSOFT.INSIGHTS/DIAGNOSTICSETTINGS/DELETE"
+| where ActivityStatusValue =~ "Success"
+| where tolower(Caller) !in (ApprovedCallers)
+| project TimeGenerated, Caller, CallerIpAddress, ResourceId, CorrelationId, OperationNameValue

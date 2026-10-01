@@ -1,0 +1,273 @@
+[
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:00:00Z",
+    "Id": "spray-00",
+    "ResultType": "50126",
+    "UserPrincipalName": "user0@example.test",
+    "IPAddress": "198.51.100.24"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:00:15Z",
+    "Id": "spray-01",
+    "ResultType": "50126",
+    "UserPrincipalName": "user1@example.test",
+    "IPAddress": "198.51.100.24"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:00:30Z",
+    "Id": "spray-02",
+    "ResultType": "50126",
+    "UserPrincipalName": "user2@example.test",
+    "IPAddress": "198.51.100.24"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:00:45Z",
+    "Id": "spray-03",
+    "ResultType": "50126",
+    "UserPrincipalName": "user3@example.test",
+    "IPAddress": "198.51.100.24"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:01:00Z",
+    "Id": "spray-04",
+    "ResultType": "50126",
+    "UserPrincipalName": "user4@example.test",
+    "IPAddress": "198.51.100.24"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:01:15Z",
+    "Id": "spray-05",
+    "ResultType": "50126",
+    "UserPrincipalName": "user0@example.test",
+    "IPAddress": "198.51.100.24"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:01:30Z",
+    "Id": "spray-06",
+    "ResultType": "50126",
+    "UserPrincipalName": "user1@example.test",
+    "IPAddress": "198.51.100.24"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:01:45Z",
+    "Id": "spray-07",
+    "ResultType": "50126",
+    "UserPrincipalName": "user2@example.test",
+    "IPAddress": "198.51.100.24"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:02:00Z",
+    "Id": "spray-08",
+    "ResultType": "50126",
+    "UserPrincipalName": "user3@example.test",
+    "IPAddress": "198.51.100.24"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:02:15Z",
+    "Id": "spray-09",
+    "ResultType": "50126",
+    "UserPrincipalName": "user4@example.test",
+    "IPAddress": "198.51.100.24"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:00:00Z",
+    "Id": "nat-00",
+    "ResultType": "50126",
+    "UserPrincipalName": "employee0@example.test",
+    "IPAddress": "203.0.113.8"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:00:12Z",
+    "Id": "nat-01",
+    "ResultType": "50126",
+    "UserPrincipalName": "employee1@example.test",
+    "IPAddress": "203.0.113.8"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:00:24Z",
+    "Id": "nat-02",
+    "ResultType": "50126",
+    "UserPrincipalName": "employee2@example.test",
+    "IPAddress": "203.0.113.8"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:00:36Z",
+    "Id": "nat-03",
+    "ResultType": "50126",
+    "UserPrincipalName": "employee3@example.test",
+    "IPAddress": "203.0.113.8"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:00:48Z",
+    "Id": "nat-04",
+    "ResultType": "50126",
+    "UserPrincipalName": "employee4@example.test",
+    "IPAddress": "203.0.113.8"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:01:00Z",
+    "Id": "nat-05",
+    "ResultType": "50126",
+    "UserPrincipalName": "employee0@example.test",
+    "IPAddress": "203.0.113.8"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:01:12Z",
+    "Id": "nat-06",
+    "ResultType": "50126",
+    "UserPrincipalName": "employee1@example.test",
+    "IPAddress": "203.0.113.8"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:01:24Z",
+    "Id": "nat-07",
+    "ResultType": "50126",
+    "UserPrincipalName": "employee2@example.test",
+    "IPAddress": "203.0.113.8"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:01:36Z",
+    "Id": "nat-08",
+    "ResultType": "50126",
+    "UserPrincipalName": "employee3@example.test",
+    "IPAddress": "203.0.113.8"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:01:48Z",
+    "Id": "nat-09",
+    "ResultType": "50126",
+    "UserPrincipalName": "employee4@example.test",
+    "IPAddress": "203.0.113.8"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:00:00Z",
+    "Id": "typo-0",
+    "ResultType": "50126",
+    "UserPrincipalName": "typo@example.test",
+    "IPAddress": "192.0.2.2"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:00:20Z",
+    "Id": "typo-1",
+    "ResultType": "50126",
+    "UserPrincipalName": "typo@example.test",
+    "IPAddress": "192.0.2.2"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:00:40Z",
+    "Id": "typo-2",
+    "ResultType": "50126",
+    "UserPrincipalName": "typo@example.test",
+    "IPAddress": "192.0.2.2"
+  },
+  {
+    "Table": "SigninLogs",
+    "TimeGenerated": "2026-01-15T10:04:10Z",
+    "Id": "success-01",
+    "ResultType": "0",
+    "UserPrincipalName": "user0@example.test",
+    "IPAddress": "198.51.100.24"
+  },
+  {
+    "Table": "AuditLogs",
+    "TimeGenerated": "2026-01-15T10:05:30Z",
+    "Id": "role-01",
+    "OperationName": "Add member to role",
+    "Result": "success",
+    "InitiatedBy": {
+      "user": {
+        "userPrincipalName": "user0@example.test",
+        "ipAddress": "198.51.100.24"
+      }
+    },
+    "TargetResources": [
+      {
+        "type": "User",
+        "userPrincipalName": "user0@example.test",
+        "modifiedProperties": [
+          {
+            "displayName": "Role.DisplayName",
+            "oldValue": "null",
+            "newValue": "\"Global Administrator\""
+          }
+        ]
+      }
+    ],
+    "CorrelationId": "lab-role-01"
+  },
+  {
+    "Table": "AuditLogs",
+    "TimeGenerated": "2026-01-15T10:06:00Z",
+    "Id": "pim-01",
+    "OperationName": "Add eligible member to role",
+    "Result": "success",
+    "InitiatedBy": {
+      "app": {
+        "servicePrincipalId": "00000000-0000-0000-0000-000000000001"
+      }
+    },
+    "TargetResources": [
+      {
+        "type": "User",
+        "userPrincipalName": "admin@example.test"
+      }
+    ],
+    "CorrelationId": "lab-pim-01"
+  },
+  {
+    "Table": "AzureActivity",
+    "TimeGenerated": "2026-01-15T10:07:00Z",
+    "Id": "delete-01",
+    "OperationNameValue": "MICROSOFT.INSIGHTS/DIAGNOSTICSETTINGS/DELETE",
+    "ActivityStatusValue": "Success",
+    "Caller": "user0@example.test",
+    "CallerIpAddress": "198.51.100.24",
+    "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/lab/providers/Microsoft.Insights/diagnosticSettings/lab-logs",
+    "CorrelationId": "lab-delete-01"
+  },
+  {
+    "Table": "AzureActivity",
+    "TimeGenerated": "2026-01-15T10:07:20Z",
+    "Id": "approved-01",
+    "OperationNameValue": "MICROSOFT.INSIGHTS/DIAGNOSTICSETTINGS/DELETE",
+    "ActivityStatusValue": "Success",
+    "Caller": "change-bot@example.test",
+    "CallerIpAddress": "198.51.100.24",
+    "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/lab/providers/Microsoft.Insights/diagnosticSettings/lab-logs",
+    "CorrelationId": "lab-approved-01"
+  },
+  {
+    "Table": "AzureActivity",
+    "TimeGenerated": "2026-01-15T10:07:40Z",
+    "Id": "failed-01",
+    "OperationNameValue": "MICROSOFT.INSIGHTS/DIAGNOSTICSETTINGS/DELETE",
+    "ActivityStatusValue": "Failure",
+    "Caller": "user0@example.test",
+    "CallerIpAddress": "198.51.100.24",
+    "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/lab/providers/Microsoft.Insights/diagnosticSettings/lab-logs",
+    "CorrelationId": "lab-failed-01"
+  }
+]

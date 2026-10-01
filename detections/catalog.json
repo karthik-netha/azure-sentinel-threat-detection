@@ -1,0 +1,45 @@
+[
+  {
+    "id": "AUTH-001",
+    "file": "password_spray.kql",
+    "name": "Possible password spray",
+    "severity": "Medium",
+    "techniques": [
+      "T1110.003"
+    ],
+    "tactics": [
+      "CredentialAccess"
+    ],
+    "frequency": "PT5M",
+    "period": "PT15M"
+  },
+  {
+    "id": "IAM-001",
+    "file": "privilege_change.kql",
+    "name": "Entra role assignment",
+    "severity": "Medium",
+    "techniques": [
+      "T1098.003"
+    ],
+    "tactics": [
+      "Persistence",
+      "PrivilegeEscalation"
+    ],
+    "frequency": "PT5M",
+    "period": "PT15M"
+  },
+  {
+    "id": "AZ-001",
+    "file": "logging_disabled.kql",
+    "name": "Unexpected diagnostic setting deletion",
+    "severity": "High",
+    "techniques": [
+      "T1562.008"
+    ],
+    "tactics": [
+      "DefenseEvasion"
+    ],
+    "frequency": "PT5M",
+    "period": "PT15M"
+  }
+]

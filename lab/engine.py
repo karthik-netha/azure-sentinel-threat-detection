@@ -9,7 +9,10 @@ def timestamp(value):
     at = datetime.fromisoformat(value.replace('Z','+00:00'))
     if at.tzinfo is None:
         raise ValueError('Timestamps must include timezone')
-    return at.astimezone(timezone.utc)
+    try:
+        return at.astimezone(timezone.utc)
+    except OverflowError:
+        raise ValueError('Timestamp out of representable range')
 
 def detect(events, now, approved=('change-bot@example.test',)):
     groups = defaultdict(list)

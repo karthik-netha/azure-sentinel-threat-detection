@@ -2,6 +2,7 @@ import copy,json,unittest
 from pathlib import Path
 from lab.engine import detect,timestamp
 
+
 class Detection(unittest.TestCase):
     def setUp(self):
         self.events=json.loads(Path('data/events.json').read_text())
@@ -37,3 +38,6 @@ class Detection(unittest.TestCase):
         self.assertFalse(detect(self.events[:10],self.at))
     def test_naive_timestamp_rejected(self):
         with self.assertRaises(ValueError): timestamp('2026-01-15T10:00:00')
+    def test_extreme_timestamp_rejected_as_value_error(self):
+        with self.assertRaises(ValueError):
+            timestamp('9999-12-31T23:59:59-14:00')

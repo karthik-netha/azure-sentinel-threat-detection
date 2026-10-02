@@ -1,9 +1,8 @@
 # Official references
 
 Reviewed during implementation on October 1, 2026. Documentation review is not live
-integration validation. Terraform additionally passed the installed provider schema
-validation; Python library behavior is checked by local tests. Pricing links are for
-re-estimation, not support for a guaranteed bill.
+integration validation; KQL execution, data connectors, and scheduled analytics
+remain unverified in Azure. Python reference-model behavior is checked by local tests.
 
 - [SigninLogs schema](https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/signinlogs)
 - [AuditLogs schema](https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/auditlogs)
